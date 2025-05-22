@@ -5,13 +5,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=7">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description"
     content="A JavaScript CRUD web application that allows users to Create, Read, Update, and Delete data.">
   <meta name="keywords" content="crud, javascript, webdevelopment, html, css, js">
   <meta name="author" content="thedevcristian">
   <meta name="robots" content="index, follow">
-
 
   <title>thedevcristian | JavaScript CRUD</title>
 
@@ -23,7 +22,9 @@
 <body>
 
   <header>
-    <h1>JavaScript C.R.U.D. Web Application</h1>
+    <h1>JavaScript C.R.U.D. Website</h1>
+    <p>This is a functional website that showcase the Create, Read, Update, and Delete function. I even use the
+      localStorage.</p>
   </header>
 
   <main>
@@ -50,27 +51,27 @@
 
           <div class="form--row__group">
             <label for="email">Email</label>
-            <input type="email" name="Email" class="form--control" id="Email" placeholder="Enter your Email">
+            <input type="email" name="email" class="form--control" id="email" placeholder="Enter your Email">
           </div>
 
           <!-- CTAs -->
           <div class="form--row__btn">
-            <button class="button button--success" id="Submit" onclick="submitData">Add Data</button>
-            <button class="button button--primary" id="Update" onclick="updateData">Update</button>
+            <button class="button button--success" id="Submit" onclick="submitData()">Add Data</button>
+            <button class="button button--primary" id="Update" onclick="updateData()">Update</button>
           </div>
 
-
         </div>
-
 
         <div class="is--right__screen">
           <table class="table table--custom" id="tableId">
             <thead>
-              <th>Name</th>
-              <th>Age</th>
-              <th>Address</th>
-              <th>Email</th>
-              <th>Remarks</th>
+              <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Address</th>
+                <th>Email</th>
+                <th>Actions</th>
+              </tr>
             </thead>
             <tbody></tbody>
           </table>
@@ -82,12 +83,10 @@
   </main>
 
   <footer>
-
     <section>
       <p>thedevcristian | 2025</p>
       <small>&copy; All Right Reserved</small>
     </section>
-
   </footer>
 
   <script src="assets/js/main.js"></script>

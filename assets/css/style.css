@@ -31,6 +31,10 @@ body {
   font-family: "Inter", sans-serif;
   background-color: var(--based-color);
   color: var(--based-text-color);
+
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
 }
 
 a,
@@ -41,6 +45,13 @@ em {
 
 li {
   list-style: none;
+}
+
+input {
+  border: none;
+  outline: none;
+  padding: 8px;
+  border-radius: 4px;
 }
 
 button {
@@ -62,6 +73,71 @@ button {
   color: var(--based-text-color);
   background: var(--based-update-color);
 }
+.button--delete {
+  color: var(--based-text-color);
+  background: var(--based-err-color);
+}
+
+header,
+footer {
+  text-align: center;
+}
+
+header,
+main,
+footer {
+  padding: 12px 16px;
+}
+
+.form--group .inner {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.form--row__group {
+  margin-bottom: 18px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.form--row__group label,
+.form--row__group input {
+  width: 100%;
+  max-width: 100%;
+}
+
+.is--left__screen,
+.is--right__screen {
+  flex: 1;
+}
+
+.is--right__screen {
+  margin: 0 auto;
+}
+
+.is--right__screen table,
+.is--right__screen table td {
+  border: 1px solid var(--based-text-color);
+  border-collapse: collapse;
+}
+
+.is--right__screen table td,
+.is--right__screen table th {
+  padding: 8px;
+}
+
+.is--right__screen table td {
+  width: 10%;
+  text-align: center;
+}
+
+.form--row__btn {
+  display: flex;
+  align-items: end;
+  justify-content: right;
+  gap: 14px;
+}
 
 @media (hover: hover) {
   button:hover {
@@ -74,5 +150,15 @@ button {
 
   .button--primary:hover {
     background: var(--based-update-hover);
+  }
+
+  .button--delete:hover {
+    background: var(--based-err-hover);
+  }
+}
+
+@media (max-width: 950px) {
+  .form--group .inner {
+    flex-direction: column;
   }
 }
