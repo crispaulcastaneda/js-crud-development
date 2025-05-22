@@ -1,0 +1,78 @@
+@charset "UTF-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+  --based-color: #000000;
+  --based-text-color: #ffffff;
+  --based-btn-color: #caab72;
+  --based-btn-hover: #f0d39d;
+  --based-err-color: #dc143c;
+  --based-err-hover: #f1375c;
+  --based-update-color: #0978b2;
+  --based-update-hover: #128fd3;
+  --based-success-color: #4caf50;
+  --based-success-hover: #5cb85c;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--based-color);
+  color: var(--based-text-color);
+}
+
+a,
+span,
+em {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  border: none;
+  outline: none;
+  padding: 12px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+}
+
+.button--success {
+  color: var(--based-text-color);
+  background: var(--based-success-color);
+}
+.button--primary {
+  color: var(--based-text-color);
+  background: var(--based-update-color);
+}
+
+@media (hover: hover) {
+  button:hover {
+    cursor: pointer;
+  }
+
+  .button--success:hover {
+    background: var(--based-success-hover);
+  }
+
+  .button--primary:hover {
+    background: var(--based-update-hover);
+  }
+}

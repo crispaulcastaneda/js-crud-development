@@ -1,0 +1,12 @@
+# IDE's Project Files
+.idea/
+
+# WIN Thumb cache
+Thumbs.db
+
+# Mac OS DS_Store Files
+.DS_Store
+
+# Machine Configuration Files 
+.env
+config/dev-env.conf
