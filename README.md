@@ -22,7 +22,7 @@ A simple CRUD (Create, Read, Update, Delete) website built with vanilla javascri
 
 ## How to use
 
-1.Clone the repository:
+1. Clone the repository:
 
 ```bash
   git clone https://github.com/crispaulcastaneda/js-crud-development.git
