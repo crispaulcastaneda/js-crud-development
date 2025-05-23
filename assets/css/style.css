@@ -33,7 +33,7 @@ body {
   color: var(--based-text-color);
 
   width: 100%;
-  max-width: 1360px;
+  max-width: 650px;
   margin: 0 auto;
 }
 
@@ -45,6 +45,14 @@ em {
 
 li {
   list-style: none;
+}
+
+li:before {
+  content: "·";
+  font-size: 20px;
+  display: inline-block;
+  padding-left: 15px;
+  margin-right: 12px;
 }
 
 input {
@@ -65,6 +73,38 @@ button {
   transition: all 0.3s ease-in-out;
 }
 
+table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+td {
+  word-wrap: break-word;
+}
+
+header {
+  margin-bottom: 48px;
+}
+
+main {
+  margin-bottom: 56px;
+}
+
+header h1 {
+  margin-bottom: 24px;
+}
+
+header,
+main,
+footer {
+  padding: 12px 16px;
+}
+
+footer {
+  text-align: center;
+  font-size: 12px;
+}
+
 .button--success {
   color: var(--based-text-color);
   background: var(--based-success-color);
@@ -78,21 +118,10 @@ button {
   background: var(--based-err-color);
 }
 
-header,
-footer {
-  text-align: center;
-}
-
-header,
-main,
-footer {
-  padding: 12px 16px;
-}
-
 .form--group .inner {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 56px;
 }
 
 .form--row__group {
@@ -118,7 +147,7 @@ footer {
 
 .is--right__screen table,
 .is--right__screen table td {
-  border: 1px solid var(--based-text-color);
+  border: 1px solid #161616;
   border-collapse: collapse;
 }
 
@@ -130,6 +159,8 @@ footer {
 .is--right__screen table td {
   width: 10%;
   text-align: center;
+  background: #222831;
+  font-size: 12px;
 }
 
 .form--row__btn {
@@ -137,6 +168,16 @@ footer {
   align-items: end;
   justify-content: right;
   gap: 14px;
+}
+
+.is--right__screen table td button {
+  display: block;
+  width: 100%;
+  font-size: 12px;
+}
+
+.is--right__screen table td button:nth-child(1) {
+  margin-bottom: 12px;
 }
 
 @media (hover: hover) {
@@ -160,5 +201,11 @@ footer {
 @media (max-width: 950px) {
   .form--group .inner {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 510px) {
+  body {
+    min-width: 550px;
   }
 }
