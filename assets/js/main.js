@@ -2,17 +2,20 @@
 
 // Email validation function
 function validateEmail(email) {
+  // Source: https://www.geeksforgeeks.org/javascript-program-to-validate-an-email-address/
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
 }
 
 // Validate functions for Input
 function validateForm() {
+  // GET THE VALUES FROM THE INPUT FIELDS
   let inputName = document.querySelector("#name").value;
   let inputAge = document.querySelector("#age").value;
   let inputAddress = document.querySelector("#address").value;
   let inputEmail = document.querySelector("#email").value;
 
+  // VALIDATE THE INPUTS
   if (inputName == "") {
     alert("Please Enter Your Name");
     return false;
@@ -106,6 +109,7 @@ function submitData() {
     localStorage.setItem("personsList", JSON.stringify(personsList));
     showData();
 
+    // CLEAR INPUT FIELDS AFTER SUBMITTING
     document.querySelector("#name").value = "";
     document.querySelector("#age").value = "";
     document.querySelector("#address").value = "";
